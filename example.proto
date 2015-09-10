@@ -1,0 +1,17 @@
+package nesl.ee.ucla;
+
+option java_generic_services = true;
+option py_generic_services = true;
+
+message HelloRequest {
+	 required string my_name = 2;
+}
+
+message HelloResponse {
+	required string hello_world = 1;
+}
+
+service HelloWorldService
+{
+	rpc HelloWorld(HelloRequest) returns (HelloResponse);
+}
